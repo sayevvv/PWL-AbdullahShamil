@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/greetings', function () {
-    return view('greetings');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Jobsheet 2 Praktikum 1
 
@@ -38,5 +38,17 @@ Route::get('/about', function () {
 Route::get('/user/{name?}', function ($name='Jhon') {
     return 'Nama saya, ' . $name;
 });
+
+// Jobsheet 2 Praktikum 3
+// ubah route hello menggunakan controller
+Route::get('/hello', [WelcomeController::class, 'hello']);
+
+// Modifikasi Route Menggunakan Controller
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [AboutController::class, 'about']);
+Route::get('/articles/{id?}', [ArticleController::class, 'articles']);
+
+
+
 
 

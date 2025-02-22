@@ -11,7 +11,13 @@ class WelcomeController extends Controller
         return 'Hello World';
     }
     // Jobsheet 2 Praktikum 7
+    // public function greeting(){
+    //     return view('blog.hello', ['name' => 'Shamil']);
+    // }
+    // Jobsheet 2 Praktikum 8
     public function greeting(){
-        return view('blog.hello', ['name' => 'Shamil']);
+        return view('blog.hello')
+        ->with('name', 'Shamil')
+        ->with('occupation', 'Mahasigma');
     }
 }

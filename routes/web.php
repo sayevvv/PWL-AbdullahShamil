@@ -61,6 +61,9 @@ Route::resource('photos', PhotoController::class)->except(['create', 'store', 'u
 // });
 
 // Jobsheet 2 Praktikum 6
-Route::get('/greeting', function () {
-    return view('blog.hello', ['name' => 'Shamil']);
-});
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Shamil']);
+// });
+
+// Jobsheet 2 Praktikum 7
+Route::get('/greeting', [WelcomeController::class, 'greeting']);

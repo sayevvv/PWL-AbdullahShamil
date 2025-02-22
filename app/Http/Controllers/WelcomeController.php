@@ -10,4 +10,8 @@ class WelcomeController extends Controller
     public function hello() {
         return 'Hello World';
     }
+    // Jobsheet 2 Praktikum 7
+    public function greeting(){
+        return view('blog.hello', ['name' => 'Shamil']);
+    }
 }

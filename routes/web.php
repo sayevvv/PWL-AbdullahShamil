@@ -22,7 +22,6 @@ Route::get('/greetings', function () {
 
 // Jobsheet 2 Praktikum 1
 
-
 Route::get('/hello', function () {
     return 'Hello';
 });
@@ -32,6 +31,12 @@ Route::get('/world', function () {
 
 Route::get('/about', function () {
     return 'NIM : 2341720166 <br> Nama : Abdullah Shamil Basayev';
+});
+
+// Jobsheet 2 Praktikum 2
+
+Route::get('/user/{name?}', function ($name='Jhon') {
+    return 'Nama saya, ' . $name;
 });
 
 

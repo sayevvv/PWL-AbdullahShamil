@@ -55,5 +55,8 @@ Route::get('/articles/{id?}', [ArticleController::class, 'articles']);
 Route::resource('photos', PhotoController::class)->only(['index', 'show']);
 Route::resource('photos', PhotoController::class)->except(['create', 'store', 'update', 'destroy']);
 
-
+// Jobsheet 2 Praktikum 5
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Shamil']);
+});
 

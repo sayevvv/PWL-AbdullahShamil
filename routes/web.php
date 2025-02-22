@@ -20,4 +20,18 @@ Route::get('/greetings', function () {
     return view('greetings');
 });
 
+// Jobsheet 2 Praktikum 1
+
+
+Route::get('/hello', function () {
+    return 'Hello';
+});
+Route::get('/world', function () {
+    return 'World';
+});
+
+Route::get('/about', function () {
+    return 'NIM : 2341720166 <br> Nama : Abdullah Shamil Basayev';
+});
+
 
